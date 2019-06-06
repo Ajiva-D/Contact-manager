@@ -1,5 +1,11 @@
 window.onload= init;
-
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+     navigator.serviceWorker.register('../sw.js').then( () => {
+      console.log('Service Worker Registered')
+     })
+   })
+  }
 // The contact manager as a global variable
 let cm; 
 
@@ -7,8 +13,7 @@ function init() {
 	// create an instance of the contact manager
 	cm = new ContactManager();
 	
-  	cm.addTestData();
-  	cm.printContactsToConsole();
+  	// cm.addTestData();
 
 	  // Display contacts in a table
 	  // Pass the id of the HTML element that will contain the table
@@ -118,12 +123,6 @@ class ContactManager {
     	return 0;
 	}
 	
-	printContactsToConsole() {
-		this.listOfContacts.forEach(function(c) {
-			console.log(c.name);
-		});
-	}
-	
 	load() {
 		if(localStorage.contacts !== undefined) {
 			// the array of contacts is savec in JSON, let's convert
@@ -151,8 +150,10 @@ class ContactManager {
 		}  
   
     	// creates and populate the table with users
-    	var table = document.createElement("table");
-          
+        var table = document.createElement("table");
+        var row = table.insertRow();
+          row.innerHTML ="<th>"+ "Name"+"</th>" 
+          + "<th>"+ "Email"+"</th>"
     	// iterate on the array of users
     	this.listOfContacts.forEach(function(currentContact) {
         	// creates a row
