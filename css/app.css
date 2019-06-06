@@ -115,4 +115,7 @@ td{
     justify-content: none;
     margin-top:50px;
 }
+body{
+  overflow-x: hidden;
+}
  }
