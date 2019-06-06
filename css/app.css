@@ -79,7 +79,7 @@ td{
   
 
   button{
-    padding:12px 31px;
+    padding:12px 20px;
     border:1px solid #413c5e;
     background: transparent;
     color:white;
@@ -108,4 +108,11 @@ td{
     color:#ffffff;
     
   }
- 
+ @media screen and (max-width:720px){
+  .flexcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    margin-top:50px;
+}
+ }
