@@ -1,16 +1,31 @@
 
 body{
     background: #2E294E;
+    font-family: 'Copse', serif;
+    font-weight: bold;
+}
+.heading{
+  display:flex;
+  justify-content: center;
+}
+.heading h1{
+  color:#D7263D;
+  font-family: 'Fira Sans', sans-serif;
+}
+.heading span{
+  color:#ffffff;
 }
 .flexcon{
     display: flex;
     justify-content: space-around;
     margin-top:50px;
 }
-
+.contact-table{
+  margin-top:70px;
+  
+}
 table {
-    margin-top: 20px;
-    width: 250px;
+    margin-top: 20px; 
     border-collapse: collapse;
     
   }
@@ -36,13 +51,12 @@ td{
     background-color:#2E294E;
     width: 250px;
     color:white;
-    font-family: Arial, Helvetica, sans-serif;
     height: 200px;
    border:1px solid #ECEBEE;
    position: relative;
    top:50%;
    transform: translateY(-50%);
-  
+  margin:0 auto;
   }
   form{
    height:500px;
@@ -86,6 +100,7 @@ td{
     color:#ffffff;
     border-radius: 3px;
     outline:none;
+    font-family: 'Fira Sans', sans-serif;
   }
   button:hover{
     background: #D7263D;
@@ -108,14 +123,26 @@ td{
     color:#ffffff;
     
   }
+  p, label{
+    font-family: 'Fira Sans', sans-serif;
+  }
  @media screen and (max-width:720px){
   .flexcon{
     display: flex;
     flex-direction: column;
-    justify-content: none;
+    justify-content: center;
     margin-top:50px;
 }
 body{
   overflow-x: hidden;
+}
+.flexcon{
+  margin: 0;
+}
+form{
+  height:355px
+}
+.contact-table{
+  margin:50px auto 0 auto;
 }
  }

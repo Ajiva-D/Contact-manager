@@ -10,10 +10,14 @@
  <meta name="theme-color" content="#2e294e" />
  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/app.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Copse|Fira+Sans&display=swap" rel="stylesheet">
     <title>Contact manager</title>
    
   </head>
   <body>
+    <div class="heading">
+      <h1>Contact <span>Manager</span></h1>
+    </div>
     <div class="flexcon">
       <form onsubmit="return formSubmitted();">
         <fieldset>
@@ -30,7 +34,7 @@
           <button class="addbtn">Add new Contact</button>
         </fieldset>
       </form>
-      <div>
+      <div class="contact-table">
         <h2>List of contacts</h2>
         <div id="contacts"></div>
         <p>
