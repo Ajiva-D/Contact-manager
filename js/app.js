@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
       console.log('Service Worker Registered')
      })
    })
-  }
+}
 // The contact manager as a global variable
 let cm; 
 
@@ -85,6 +85,7 @@ class ContactManager {
 	
 	add(contact) {
 		this.listOfContacts.push(contact);
+		this.save();
 	}
 	
 	remove(contact) {
